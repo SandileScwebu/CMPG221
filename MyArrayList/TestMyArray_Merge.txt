@@ -1,0 +1,77 @@
+//DIFFERENT FROM TestMyArray
+
+//create merge test class 
+public class TestMyArray
+{
+	public static void main(String[] args)
+	{
+		//create lists
+		MyArrayList<Integer> list1 = new MyArrayList<>();
+		MyArrayList<Integer> list2 = new MyArrayList<>();
+		MyArrayList<Integer> list3 = new MyArrayList<>();
+		
+		//check empty lists
+		System.out.println(" Test 1: Both empty");
+		list3 = list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+		
+		System.out.println(" Test 2: Param empty");
+		list1.add(0, new Integer(3));
+		list1.add(1, new Integer(8));
+		list1.add(2, new Integer(17));
+		list3=list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+		
+		System.out.println(" Test 3: Calling empty");
+		list1.clear();
+		list2.add(0, new Integer(3));
+		list2.add(1, new Integer(8));
+		list2.add(2, new Integer(17));
+		list3=list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+		
+		//check list 1/2 length difference
+		System.out.println(" Test 4: Calling shorter");
+		list1.clear();
+		list2.clear();
+		list1.add(0, new Integer(3));
+		list1.add(1, new Integer(8));
+		list2.add(0, new Integer(3));
+		list2.add(1, new Integer(8));
+		list2.add(2, new Integer(17));
+		list3=list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+		
+		//check list 1/2 length difference
+		System.out.println(" Test 5: Param shorter");
+		list1.clear();
+		list2.clear();
+		list1.add(0, new Integer(3));
+		list1.add(1, new Integer(8));
+		list1.add(2, new Integer(17));
+		list2.add(2, new Integer(17));
+		list3=list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+		
+		//check list 1/2 length difference
+		System.out.println(" Test 6: Same size");
+		list1.clear();
+		list2.clear();
+		list1.add(0, new Integer(3));
+		list2.add(2, new Integer(17));
+		list3=list1.merge(list2);
+		System.out.println("List 1: "+list1);
+		System.out.println("List 2: "+list2);
+		System.out.println("List 3: "+list3);
+	}
+}

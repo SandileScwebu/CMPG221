@@ -1,0 +1,52 @@
+//IN MyArrayList<E>
+
+//create sort method
+public boolean sortList()
+{
+	E hold;
+	
+	//first for loop - traverse array - example if size=10 and i=5 then 1-4 has been sorted, itll continue until j = 9 
+	for(int i=0;i<size-1;i++)
+	{
+	
+		//second for loop - swap elements
+		for(int j=0;j<size-1;j++)
+		{
+			//swap elements - if "1" data[j+1] larger 
+			if(((Comparable)data[j]).compareTo(data[j+1])>0)
+			{
+				hold = data[j+1];
+				data[j+1]=data[j];
+				data[j]=hold;
+			}
+		}
+	}
+	
+	return true;
+}
+
+//USE FOR PRACTICE
+//create sort method
+()
+{
+	E ;
+	
+	//first for loop - traverse array 
+	()
+	{
+	
+		//second for loop - swap elements
+		()
+		{
+			//swap elements - if "1" data[j+1] larger 
+			if(((Comparable)[]).([])>0)
+			{
+				;
+				;
+				;
+			}
+		}
+	}
+	
+	return ;
+}

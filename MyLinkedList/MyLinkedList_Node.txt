@@ -1,0 +1,16 @@
+//IN MyLinkedList
+
+//create inner class - node
+private static class Node<E>
+{
+	//initialize
+	E element;
+	Node<E> next;
+	
+	// create constructor
+	public Node(E element)
+	{
+		this.element = element;
+		next = null;
+	}
+}

@@ -1,0 +1,50 @@
+//create class
+public class TestMyArray{
+	
+	//create test class
+	public static void main (String[] args){
+		
+		//create array 
+		MyArrayList<Geometric Object> list = new MyArrayList<>();
+		
+		//create objects
+		Circle c1 = new Circle(10,"red",false);
+		
+		Rectangle r1 = new Ractangle(5,3,"red",false);
+		
+		//add objects into array
+		list.add(0,c1);
+		list.add(1,r1);
+		
+		//display if == true
+		if(list.sortlist())
+			System.out.println(list);
+	} 
+}
+
+//USE THIS TO PRACTICE
+
+//create class
+{
+	
+	//create test class
+	{
+		
+		//create array 
+		
+		
+		//create objects
+		;
+		
+		;
+		
+		//add objects into array
+		;
+		;
+		
+		//display
+		if()
+			;
+	} 
+}
+

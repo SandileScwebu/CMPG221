@@ -1,0 +1,13 @@
+//create outerclass - linked list
+public class MyLinkedList<E>
+{
+	//initialize
+	private Node<E> head, tail;
+	
+	//constructor
+	public MyLinkedList()
+	{
+		head=null;
+		tail=nail;
+	}
+}

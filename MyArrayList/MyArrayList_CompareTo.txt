@@ -1,0 +1,53 @@
+//IN MyArrayList<E>
+
+//FIRST
+//Change MyArrayList :
+//public abstract class MyArrayList<E> implements Comparable<GeometricObject>
+
+//SECOND
+//Create getClass / getArea / getName... use MyArrayList_GetMethod
+
+//THIRD
+//create compareTo method - "this" circle/"g" rectangle
+public int compareTo(GeometricObject g)
+{
+	//check datatype
+	if(this.getClass().equals(g.getClass()))
+	{
+		//cast on g
+		Cricle c = (Cricle)g;
+		
+		//compare Area
+		if(this.getArea()==c.getArea())
+			return 0;
+		else
+			if(this.getArea()<c.getArea())
+				return -1;
+			else
+				return 1;
+	}
+	else
+		return this.getClass().getName().compareTo(g.getClass().getName());
+}
+
+//USE FOR PRACTICE
+public int compareTo(GeometricObject g)
+{
+	//check datatype
+	if(this.getClass().equals(g.getClass()))
+	{
+		//cast on g
+		Cricle c = (Cricle)g;
+		
+		//compare Area
+		if(this.getArea()==c.getArea())
+			return 0;
+		else
+			if(this.getArea()<c.getArea())
+				return -1;
+			else
+				return 1;
+	}
+	else
+		return this.getClass().getName().compareTo(g.getClass().getName());
+}

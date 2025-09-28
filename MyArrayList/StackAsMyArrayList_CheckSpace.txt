@@ -1,0 +1,9 @@
+//check space method for StackAsMyArrayList
+public boolean checkSpace()
+{
+	if(size+1<MAX)
+		return true;
+	else
+		return false;
+		
+}

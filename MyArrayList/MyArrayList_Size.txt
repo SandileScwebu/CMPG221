@@ -1,0 +1,15 @@
+//IN MyArrayList<E>
+
+//create size method accessor
+public int getSize()
+{
+	return size;
+}
+
+
+//USE FOR PRACTICE 
+//create size method accessor
+()
+{
+	return ;
+}

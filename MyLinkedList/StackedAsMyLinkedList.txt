@@ -1,0 +1,42 @@
+//stack class to pop() and push()
+public class StackAsMyLinkedList<E>
+{
+	MyLinkedList<E> theStack;
+	
+	public StackAsMyLinkedList()
+	{
+		theStack = new MyLinkedList<E>();
+	}
+	
+	//at head bcz O(1) 
+	public void push(E newElement)
+	{
+		theStack.prepend(newElement);
+	}
+	
+	//at head delete(head) bcz at tail O(1)
+	public E pop()
+	{
+		//check list not empty
+		E temp = null;
+		
+		//delete method 1/0
+		boolean isDone = false;
+		
+		//return pop value
+		temp = theStack.getFirst();
+		
+		if(temp!=null)
+			isDone=theStack.delete(temp);
+		
+		if(isDone)
+			return true;
+		else
+			return null;
+	}
+	
+	public String toString()
+	{
+		return theStack.toString();
+	}
+}

@@ -1,0 +1,40 @@
+//IN MyArrayList<E>
+
+//create remove method
+public E remove(int index)
+{
+	
+	//check index
+	if(index<0 || index>=size)
+		throw new IndexOutOfBoundsException("Index: "+index+", Size:"+size);
+	
+	E e = data[index];
+	
+	//shuffle elements - to the left
+	for(int j=index; j<=size-1;j++)
+		data[j]=data[j+1];
+		
+	data[size-1]=null;
+	size--;
+	return e;
+}
+
+//USE FOR PRACTICE
+//create remove method
+()
+{
+	
+	//check index
+	(||)
+		();
+	
+	 = data[];
+	
+	//shuffle elements - to the left
+	(=; <=;)
+		[]=[];
+		
+	[]=null;
+	--;
+	return ;
+}
