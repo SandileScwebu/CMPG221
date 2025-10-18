@@ -1,3 +1,20 @@
+----THEORY----
+
+4	2	5	4	3	3	2	1	2	3	1	2
+
+BUCKETS: LARGEST VALUE N "5"
+RANGE: 0 - N "0 - 5 "
+INITIAL VALUE IN BUCKET: 0
+
+
+BUCKET 1: 2
+BUCKET 2: 4
+BUCKET 3: 3
+BUCKET 4: 2
+BUCKET 5: 1
+
+
+----CODE-----
 public class Example
 {
 	

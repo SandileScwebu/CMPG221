@@ -1,4 +1,16 @@
-//creade node for insert element
+------THEORY------
+	
+	IF BINARY TREE EMPTY 
+		CREATE ROOT NODE W/ ELEMENT
+	ELSE
+		LOCATE PARENT NODE OF ELEMENT TO BE INSERTED(NEW ELEMENT)
+		IF NEW ELEMENT LESS THAN PARENT 
+			NEW ELEMENT BECOMES PARENT LEFT CHILD
+		ELSE IF NEW ELEMENT GREATER THAN PARENT 
+			NEW ELEMENT BECOMES PARENT RIGHT CHILD
+
+------CODE-----
+//create node for insert element
 public boolean insertElement(E element)
 {
 	
@@ -46,3 +58,89 @@ public boolean insertElement(E element)
 		
 	}
 }
+
+------PRACTISE-----
+
+public boolean insertElem(E element)
+{
+	if(root==null)
+	{
+		root = new TreeNode(element);
+	}
+	else
+	{
+		current=root;
+		
+		while(current!=null)
+		{
+			if(element<current.element)
+			{
+				parent=current;
+				current = current.left;
+			}
+			else if(element>current.element)
+			{
+				parent=current;
+				current = current.right;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		
+			if(element<parent.element)
+			{
+				parent.left = new TreeNode(element);
+			}
+			else if(element> parent.element)
+			{
+				parent.right = new TreeNode(element);
+			}
+		return true;
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

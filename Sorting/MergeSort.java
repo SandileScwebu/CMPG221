@@ -1,4 +1,56 @@
+-----THEORY - MERGE SORT---
+2	9	5	4	8	1	6	7
+[DIVIDE-SPLIT]
+SPLIT
+2	9	5	4							|							8	1	6	7
+SPLIT
+2	9	|	5	4						|						8	1	|	6	7
+SPLIT
+2	|	9		|		5	|	4		|		8	|	1		|		6	|	7
 
+[CONQUER-SORT&MERGE]
+
+(2	|	9)		|		(5	|	4)		|		(8	|	1)		|		(6	|	7)
+MERGE
+(2	9			|		4	5)			|			(1	8			|		6	7)
+MERGE
+(2	4	5	9							|							1	6	7	8)
+MERGE
+1	2	4	5	6	7	8	9
+
+-----THEORY - MERGE TWO SORTED LISTS ---
+
+LIST 1				 LIST 2
+*2	4	5	9		|		*1	6	7	8
+
+LIST 3 - "COMPARE *2 AND *1. ENTER LOWEST INTO LIST 3. INCREMENT POINTER"
+-	-	-	-	-	-	-	-
+
+	A.INSERT 1
+
+LIST 1				 LIST 2
+*2	4	5	9		|		1	*6	7	8
+
+LIST 3 - "AFTER INSERT 1"
+1	-	-	-	-	-	-	-
+
+	B.INSERT 2
+
+LIST 1				 LIST 2
+2	*4	5	9		|		1	*6	7	8
+
+LIST 3 - "AFTER INSERT 2"
+1	2	-	-	-	-	-	-
+
+	C.INSERT 9
+
+LIST 1				 LIST 2
+2	4	5	*9		|		1	6	7	*8
+
+LIST 3 - "AFTER INSERT 9"
+1	2	4	5	6	7	8	9
+
+-----CODE----
 public MyArrayList<E> merge(MyArrayList<E> param)
 {
 	//initialize counters

@@ -1,4 +1,35 @@
+//SORT LIST BY REPEATEDLY INSERT UNSORTED ELEMENT INTO SORTED SUBLIST
+-----THEORY------
+
+int[] myList = { 2, 9, 5, 4, 8, 1, 6};
+
+
+2|	9	5	4	8	1	6
+subList = {2}
+
+2	9|	5	4	8	1	6
+subList = {2, 9}
+"MY NOTES - WHEN MOVING UNSORTED ELEMENT[i] 9 TO THE CORRECT PLACE IN SORTED LIST. TEST IF [i] SMALLER THAN SORTED ELEMENT[k=i-1](2): IF IT IS INSERT ON RIGHT. IF NOT DECREMENT THEN TEST"
+
+2	5	9|	4	8	1	6
+subList = {2, 5, 9}
+
+2	4	5	9|	8	1	6
+subList = {2, 4, 5, 9}
+
+2	4	5	8	9|	1	6
+subList = {2, 4, 5, 8, 9}
+
+1	2	4	5	8	9|	6
+subList = {1, 2, 4, 5, 8, 9}
+
+1	2	4	5	6	8	9|	
+subList = {1, 2, 4, 5, 8, 9}
+
+
+-----CODE-----
 //public class 
+
 public static void insertionSort(int[] list)
 {
 	for(int i=1; i<list.length; i++) //create traverse list index
@@ -21,7 +52,7 @@ public static void insertionSort(int[] list)
 			//EXAMPLE INDEX:    0   1   
 			//EXAMPLE ELEMENT:  5   5
 		}
-		
+		//When loop exits k=-1 
 		list[k+1] = currentElement;
 		
 		//SUBLIST list k
@@ -35,3 +66,21 @@ public static void insertionSort(int[] list)
 //EXAMPLE list n 
 //INDEX:    0   1  2
 //ELEMENT:  5   2  4
+
+---FOR PRACTISE--- 
+
+public static void insertionSort(int[] list)
+{
+	for(int i=1; i<list.length;i++)
+	{
+		int currentElement = list[i];
+		int k;
+		
+		for(k=i-1;k>=0 && list[k] > list[i];k--)
+		{
+			list[k+1]=list[k];
+		}
+		
+		list[k+1] = currentElement;
+	}
+}
