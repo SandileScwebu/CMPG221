@@ -1,0 +1,48 @@
+//4
+//IN  MyLinkedList
+-----------------------THEORY(MEMORIZE)
+
+-CREATE RESULT
+-FOR LOOP ADD ELEMENTS
+
+------------------------CODE---------------------
+//create toString methaod - using 3 steps
+public String toString()
+{
+	//step 2.3 - initialize result string
+	String result = "[";
+	
+	Node<E> ptr;
+	
+	//step 2.3 - traverse and add each element to result string 
+	for(ptr=head;ptr!=null; ptr=ptr.next)
+	{
+		result=result+ptr.element.toString();
+		if(ptr.next!=null)
+		{
+			result = result+",";
+		}
+	}
+	
+	result += "]";
+	return result;
+}
+
+-------------------------PRACTICE---------------
+
+ public String toString()
+ {
+	 String result = "[";
+	 
+	 Node<E> ptr;
+	 
+	 for(ptr=head;ptr!=null;ptr=ptr.next)
+	 {
+		result+=ptr.element.toString();
+		if(ptr.next!=null)
+			result+=",";
+	 }
+	 
+	 return result.toString() +"]";
+	 
+ }

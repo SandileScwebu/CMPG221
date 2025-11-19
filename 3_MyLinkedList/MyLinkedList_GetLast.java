@@ -1,0 +1,27 @@
+//7
+//IN MyLinkedList
+
+//create get last element
+public E getLast()
+{
+	
+	if(head ==null)
+		return null;
+	else 
+		return tail.element;
+}
+
+-----------------------------PRACTICE--------------------
+
+public E getLast()
+{
+	if(head==null)
+	{
+		return null;
+	}
+	else
+	{
+		return tail.element;
+	}
+}
+
